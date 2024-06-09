@@ -15,6 +15,6 @@ public class ServiceTwoResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String handleServiceTwo(@PathParam("value") String value) {
         Log.debug("Value = " + value);
-        return value;
+        return value.toUpperCase();
     }
 }
