@@ -1,0 +1,27 @@
+schemaVersion: 2.2.0
+metadata:
+  name: service-two
+components:
+  - name: dev-tooling
+    container:
+      image: quay.io/devfile/universal-developer-image:ubi8-latest
+  - name: service-one
+    container:
+      image: quay.io/rh_ee_sshirodk/demo-service-one
+commands:
+  - id: install
+    exec:
+      commandLine: mvn clean install
+      component: dev-tooling
+  - id: package
+    exec:
+      commandLine: mvn package
+      component: dev-tooling
+  - id: debug
+    exec:
+      commandLine: mvn quarkus:debug
+      component: dev-tooling
+  - id: run
+    exec:
+      commandLine: mvn quarkus:run
+      component: dev-tooling
