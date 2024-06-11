@@ -17,11 +17,7 @@ commands:
     exec:
       commandLine: mvn package
       component: dev-tooling
-  - id: debug
+  - id: dev
     exec:
-      commandLine: mvn quarkus:debug
-      component: dev-tooling
-  - id: run
-    exec:
-      commandLine: mvn quarkus:run
+      commandLine: mvn quarkus:dev
       component: dev-tooling
