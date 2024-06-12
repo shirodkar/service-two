@@ -1,10 +1,9 @@
 services:
-  mysql:
-    image: registry.redhat.io/rhel8/mysql-80
+  postgres:
+    image: postgres
     environment:
-      - MYSQL_USER=mysql80
-      - MYSQL_PASSWORD=mysql80
-      - MYSQL_DATABASE=mysql80
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DATABASE=postgres
     ports:
-      - 3306:3306
-    container_name: mysql
+      - 5432:5432
