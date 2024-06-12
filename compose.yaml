@@ -6,5 +6,5 @@ services:
       - MYSQL_PASSWORD=mysql80
       - MYSQL_DATABASE=mysql80
     ports:
-      - 3306:3307
+      - 3306:3306
     container_name: mysql
