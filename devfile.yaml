@@ -5,25 +5,25 @@ components:
   - name: dev-tooling
     container:
       image: quay.io/devfile/universal-developer-image:ubi8-latest
-  - name: mysql
+  - name: postgres
     container:
-      image: registry.redhat.io/rhel8/mysql-80
+      image: postgres
       memoryRequest: 128M
       memoryLimit: 512M
       sourceMapping: /projects
       mountSources: true
       env:
-      - name: MYSQL_USER
-        value: mysql80
-      - name: MYSQL_PASSWORD
-        value: mysql80
-      - name: MYSQL_DATABASE
-        value: mysql80
+      - name: POSTGRES_USER
+        value: postgres
+      - name: POSTGRES_PASSWORD
+        value: postgres
+      - name: POSTGRES_DATABASE
+        value: postgres
       volumeMounts:
       - name: db-volume
-        path: /var/lib/mysql/data
+        path: /var/lib/postgres/data
       endpoints:
-      - name: mysql
+      - name: postgres
         targetPort: 3306
         exposure: internal
   - name: db-volume
