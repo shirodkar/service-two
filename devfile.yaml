@@ -5,9 +5,30 @@ components:
   - name: dev-tooling
     container:
       image: quay.io/devfile/universal-developer-image:ubi8-latest
-  - name: service-one
+  - name: db
     container:
-      image: quay.io/rh_ee_sshirodk/demo-service-one
+      image: quay.io/sclorg/postgresql-15-c9s:c9s
+      memoryRequest: 128M
+      memoryLimit: 512M
+      sourceMapping: /projects
+      mountSources: true
+      env:
+      - name: POSTGRESQL_USER
+        value: postgres
+      - name: POSTGRESQL_PASSWORD
+        value: postgres
+      - name: POSTGRESQL_DATABASE
+        value: postgres
+      volumeMounts:
+      - name: db-volume
+        path: /var/lib/pgsql/data
+      endpoints:
+      - name: postgres
+        targetPort: 5432
+        exposure: internal
+  - name: db-volume
+    volume:
+      size: 2Gi
 commands:
   - id: install
     exec:
