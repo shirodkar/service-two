@@ -7,7 +7,7 @@ components:
       image: quay.io/devfile/universal-developer-image:ubi8-latest
   - name: postgres
     container:
-      image: quay.io/sclorg/postgresql-15-c9s:c9s
+      image: postgres
       memoryRequest: 128M
       memoryLimit: 512M
       sourceMapping: /projects
