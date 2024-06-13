@@ -7,28 +7,28 @@ components:
       image: quay.io/devfile/universal-developer-image:ubi8-latest
   - name: postgres
     container:
-      image: postgres
+      image: quay.io/sclorg/postgresql-15-c9s:c9s
       memoryRequest: 128M
       memoryLimit: 512M
       sourceMapping: /projects
       mountSources: true
       env:
-      - name: POSTGRES_USER
+      - name: POSTGRESQL_USER
         value: postgres
-      - name: POSTGRES_PASSWORD
+      - name: POSTGRESQL_PASSWORD
         value: postgres
-      - name: POSTGRES_DATABASE
+      - name: POSTGRESQL_DATABASE
         value: postgres
       volumeMounts:
-      - name: postgres-volume
-        path: /var/lib/psql/data
+      - name: pgdata
+        path: /var/lib/pgsql/data
       endpoints:
-      - name: postgres
-        targetPort: 5432
-        exposure: internal
-  - name: postgres-volume
-    volume:
+        - name: postgres
+          targetPort: 5432
+          exposure: internal
+  - volume:
       size: 2Gi
+    name: pgdata
 commands:
   - id: install
     exec:
