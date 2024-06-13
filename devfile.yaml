@@ -20,13 +20,13 @@ components:
       - name: POSTGRES_DATABASE
         value: postgres
       volumeMounts:
-      - name: db-volume
+      - name: postgres-volume
         path: /var/lib/psql/data
       endpoints:
       - name: postgres
         targetPort: 5432
         exposure: internal
-  - name: db-volume
+  - name: postgres-volume
     volume:
       size: 2Gi
 commands:
