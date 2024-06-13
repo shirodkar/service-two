@@ -21,7 +21,7 @@ components:
         value: postgres
       volumeMounts:
       - name: db-volume
-        path: /var/lib/postgres/data
+        path: /var/lib/psql/data
       endpoints:
       - name: postgres
         targetPort: 5432
