@@ -24,7 +24,7 @@ components:
         path: /var/lib/postgres/data
       endpoints:
       - name: postgres
-        targetPort: 3306
+        targetPort: 5432
         exposure: internal
   - name: db-volume
     volume:
