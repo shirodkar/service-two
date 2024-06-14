@@ -9,7 +9,6 @@ components:
       - name: service-two
         targetPort: 8081
         exposure: public
-        protocol: http
       - name: debug
         exposure: internal
         targetPort: 5858
