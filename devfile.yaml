@@ -43,6 +43,9 @@ components:
           targetPort: 5432
           exposure: internal
   - volume:
+      size: 4Gi
+    name: projects
+  - volume:
       size: 2Gi
     name: pgdata
   - volume:
