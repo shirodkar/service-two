@@ -19,6 +19,9 @@ components:
       env:
       - name: DEBUG_PORT
         value: '5858'
+      volumeMounts:
+      - name: m2
+        path: /home/user/.m2
   - name: postgres
     container:
       image: quay.io/sclorg/postgresql-15-c9s:c9s
@@ -43,6 +46,9 @@ components:
   - volume:
       size: 2Gi
     name: pgdata
+  - volume:
+      size: 2Gi
+    name: m2
 commands:
   - id: install
     exec:
