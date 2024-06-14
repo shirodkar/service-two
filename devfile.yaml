@@ -4,6 +4,12 @@ metadata:
 components:
   - name: dev-tooling
     container:
+      memoryRequest: 1Gi
+      memoryLimit: 8Gi
+      cpuRequest: 500m
+      cpuLimit: 2000m
+      mountSources: true
+      sourceMapping: /projects
       image: quay.io/devfile/universal-developer-image:ubi8-latest
       endpoints:
       - name: service-two
