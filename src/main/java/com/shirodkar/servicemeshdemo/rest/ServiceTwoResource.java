@@ -22,12 +22,14 @@ public class ServiceTwoResource {
     public String handleServiceTwo(@PathParam("value") String value) {
         Log.debug("Value = " + value);
 
+        String returnValue = value + ":" + value;
+
         RequestLog requestLog = new RequestLog();
         requestLog.timestamp = new Date();
         requestLog.requestValue = value;
-        requestLog.responseValue = value.toUpperCase();
+        requestLog.responseValue = returnValue;
         requestLog.persist();
 
-        return value + ":" + value;
+        return returnValue;
     }
 }
