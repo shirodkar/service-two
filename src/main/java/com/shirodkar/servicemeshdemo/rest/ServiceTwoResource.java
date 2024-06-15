@@ -28,6 +28,6 @@ public class ServiceTwoResource {
         requestLog.responseValue = value.toUpperCase();
         requestLog.persist();
 
-        return value.toUpperCase();
+        return value + ":" + value;
     }
 }
