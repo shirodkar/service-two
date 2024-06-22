@@ -24,7 +24,7 @@ public class ServiceTwoResource {
 
         String returnValue = value + ":" + value;
 
-        // Persist the request log
+        // Persist the request log in the database
         RequestLog requestLog = new RequestLog();
         requestLog.timestamp = new Date();
         requestLog.requestValue = value;
