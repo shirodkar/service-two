@@ -2,7 +2,7 @@ package com.shirodkar.servicemeshdemo.rest;
 
 import java.util.Date;
 
-import com.shirodkar.servicemeshdemo.entity.RequestLog;
+import com.shirodkar.servicemeshdemo.entity.AccessLog;
 
 import io.quarkus.logging.Log;
 import jakarta.transaction.Transactional;
@@ -25,7 +25,7 @@ public class ServiceTwoResource {
         String returnValue = value + ":" + value;
 
         // Persist the request log
-        RequestLog requestLog = new RequestLog();
+        AccessLog requestLog = new AccessLog();
         requestLog.timestamp = new Date();
         requestLog.requestValue = value;
         requestLog.responseValue = returnValue;

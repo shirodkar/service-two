@@ -6,7 +6,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
 
 @Entity
-public class RequestLog extends PanacheEntity {
+public class AccessLog extends PanacheEntity {
 
     public String requestValue;
 
