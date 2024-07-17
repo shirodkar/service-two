@@ -22,6 +22,8 @@ components:
         exposure: internal
         targetPort: 5005
       env:
+      - name: VSCODE_TRUSTED_EXTENSIONS
+        value: "github.copilot,github.copilot-chat"
       - name: DEBUG_PORT
         value: '5858'
       volumeMounts:
