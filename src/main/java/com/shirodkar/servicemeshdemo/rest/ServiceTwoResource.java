@@ -23,7 +23,7 @@ public class ServiceTwoResource {
         Log.debug("service-two received the value - '" + value + "'");
 
         String returnValue = value + ":" + value;
-
+        
         // Persist the access log entry in the database
         AccessLog requestLog = new AccessLog();
         requestLog.timestamp = new Date();
