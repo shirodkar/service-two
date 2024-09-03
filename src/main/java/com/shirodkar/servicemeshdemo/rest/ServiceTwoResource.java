@@ -20,7 +20,7 @@ public class ServiceTwoResource {
     @Produces(MediaType.TEXT_PLAIN)
     @Transactional
     public String handleServiceTwo(@PathParam("value") String value) {
-        Log.debug("service-two received the value - '" + value + "'");
+        Log.info("service-two received the value - '" + value + "'");
 
         String returnValue = value + ":" + value;
         
