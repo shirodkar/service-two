@@ -26,6 +26,8 @@ components:
         value: "github.copilot,github.copilot-chat"
       - name: DEBUG_PORT
         value: '5858'
+      - name: KUBEDOCK_ENABLED
+        value: 'true'
       volumeMounts:
       - name: m2
         path: /home/user/.m2
