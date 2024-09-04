@@ -51,7 +51,7 @@ components:
       endpoints:
         - name: postgres
           targetPort: 5432
-          exposure: internal
+          exposure: public
   - volume:
       size: 4Gi
     name: projects
