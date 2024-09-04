@@ -8,6 +8,6 @@ This is a microservice which exposes a REST endpoint:
 
 The input value is:
 
-- Stored in a database
+- Stored in a database as an access log
 - Returned back in the format `<value>:<value>`
 
