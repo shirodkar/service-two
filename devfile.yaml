@@ -15,6 +15,7 @@ components:
       - name: service-two
         targetPort: 8081
         exposure: public
+        protocol: http
       - name: debug
         exposure: internal
         targetPort: 5858
@@ -51,7 +52,7 @@ components:
       endpoints:
         - name: postgres
           targetPort: 5432
-          exposure: public
+          exposure: internal
   - volume:
       size: 4Gi
     name: projects
