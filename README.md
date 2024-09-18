@@ -2,7 +2,7 @@
 
 ## A sample Quarkus application
 
-This is a microservice which exposes a REST endpoint:
+This is a microservice which exposes the REST endpoint:
 
 `GET /handle/{value}`
 
