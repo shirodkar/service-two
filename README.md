@@ -8,7 +8,7 @@ This is a microservice which exposes the REST endpoint:
 
 The input value is:
 
-1. Stored in a database as an access log (timestamp, request value, response value)
+1. Stored in a database as an Access Log (timestamp, request value, response value)
 2. Returned back in the format `<value>:<value>`
 
 Database Configuration properties:
