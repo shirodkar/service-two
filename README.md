@@ -18,4 +18,4 @@ Database Configuration properties:
 `quarkus.datasource.password`  
 `quarkus.datasource.db-kind`  
 
-[![Contribute](https://www.eclipse.org/che/contribute.svg)](https://devspaces.apps.cluster-t9r5h.t9r5h.sandbox3255.opentlc.com/#https://github.com/shirodkar/service-two.git)
+[![Contribute](https://www.eclipse.org/che/contribute.svg)](https://devspaces.apps.rosa-zg8p2.z4w8.p1.openshiftapps.com/#https://github.com/shirodkar/service-two.git)
