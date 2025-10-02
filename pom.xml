@@ -63,18 +63,6 @@
       <artifactId>quarkus-jdbc-postgresql</artifactId>
     </dependency>
   </dependencies>
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>redhat</id>
-      <url>https://maven.repository.redhat.com/ga</url>
-    </repository>
-  </repositories>
   <pluginRepositories>
     <pluginRepository>
       <releases>
